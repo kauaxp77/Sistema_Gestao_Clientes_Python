@@ -1,0 +1,41 @@
+# O que NUNCA deve entrar neste repositório.
+#
+# POR QUE ISTO EXISTE
+#
+# O clientes.xlsx estava versionado aqui, num repositório público, com uma ficha
+# preenchida: nome completo, contato, idade, gênero e endereço com número. O mesmo
+# registro aparecia de novo dentro de Sistema-De-Cadastro-main.zip, que era uma cópia
+# do projeto inteiro commitada dentro do projeto.
+#
+# Não quebra nada tirar: o app.py cria o clientes.xlsx com o cabeçalho na primeira
+# execução, quando o arquivo não existe (a checagem está lá, `if tabela.exists()`).
+# O arquivo é SAÍDA do programa, não código dele.
+
+# ----------------------------------------------------------------- dados de clientes
+# A planilha é o banco de dados deste programa. Ela é de quem roda, não do repositório.
+clientes.xlsx
+*.xlsx
+*.xls
+*.csv
+
+# ------------------------------------------------------------------- cópias do projeto
+# Zip do próprio projeto dentro do projeto: leva junto tudo o que as linhas acima
+# barram, sem passar por elas.
+*.zip
+
+# ------------------------------------------------------------------------ Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ------------------------------------------------------------------------ segredos
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------------------ sistema
+.DS_Store
+Thumbs.db
