@@ -2,7 +2,7 @@ from typing import Optional, Tuple, Union
 import customtkinter as ctk
 from tkinter import *
 from tkinter import messagebox
-import openpyxl, xlrd
+import openpyxl
 import pathlib
 from openpyxl import workbook
 
